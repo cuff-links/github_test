@@ -1,0 +1,5 @@
+**/**/.cache
+**/**/.benchmarks
+**/**/.idea
+**/**/__pycache__
+**/**/*.pyc

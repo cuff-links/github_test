@@ -16,11 +16,9 @@ class TestGeocode(object):
         "?address=51+Kalakaua+St,+Hilo,+HI%2096720",
         "?address=Mala,+Sweden"
     ])
-    def test_return_geocode_for_valid_address(self, api_key, address):
+    def test_return_geocode_for_valid_address(self, api_key, address, geocode_schema, https_url):
 
-        schema = open('support/schemas/geocode_schema.json').read()
-
-        url = "https://maps.googleapis.com/maps/api/geocode/json" + address + api_key
+        url = https_url + address + api_key
 
         data = urllib2.urlopen(url).read()
-        jsonschema.Draft4Validator(json.loads(schema)).validate(json.loads(data))
+        jsonschema.Draft4Validator(json.loads(geocode_schema)).validate(json.loads(data))
