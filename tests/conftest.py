@@ -39,3 +39,8 @@ def request_denied_zero_results_invalid_request_schema():
 @pytest.fixture
 def https_url(output_format):
     return "https://maps.googleapis.com/maps/api/geocode/" + output_format
+
+
+@pytest.fixture
+def http_url(output_format):
+    return "http://maps.googleapis.com/maps/api/geocode/" + output_format
