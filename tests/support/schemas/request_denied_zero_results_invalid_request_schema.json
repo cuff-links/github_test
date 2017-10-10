@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "properties": {
+    "error_message": {
+      "default": "",
+      "type": "string"
+    },
+    "results": {
+      "items": {
+        "description": "This accepts anything, as long as it's valid JSON.",
+        "title": "Empty Object"
+      },
+      "maxItems": 0,
+      "type": "array"
+    },
+    "status": {
+      "default": "",
+      "type": "string"
+    }
+  },
+  "required": [
+    "status",
+    "results"
+  ],
+  "type": "object"
+}

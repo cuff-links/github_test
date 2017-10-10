@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "properties": {
+    "results": {
+      "items": {
+        "properties": {
+          "address_components": {
+            "items": {
+              "properties": {
+                "long_name": {
+                  "type": "string"
+                },
+                "short_name": {
+                  "type": "string"
+                },
+                "types": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "formatted_address": {
+            "type": "string"
+          },
+          "geometry": {
+            "properties": {
+              "location": {
+                "properties": {
+                  "lat": {
+                    "type": "number"
+                  },
+                  "lng": {
+                    "type": "number"
+                  }
+                },
+                "type": "object"
+              },
+              "location_type": {
+                "type": "string"
+              },
+              "viewport": {
+                "properties": {
+                  "northeast": {
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "southwest": {
+                    "properties": {
+                      "lat": {
+                        "type": "number"
+                      },
+                      "lng": {
+                        "type": "number"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
+          "place_id": {
+            "type": "string"
+          },
+          "types": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}
