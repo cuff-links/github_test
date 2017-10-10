@@ -14,7 +14,8 @@ class TestGeocode(object):
         "?address=Narsarsuaq,+Greenland",
         "?address=chekalin,+russia%20301414",
         "?address=51+Kalakaua+St,+Hilo,+HI%2096720",
-        "?address=Mala,+Sweden"
+        "?address=Mala,+Sweden",
+        "?address=!KS!"
     ])
     def test_return_geocode_for_valid_address(self, api_key, address, geocode_schema, https_url):
 
