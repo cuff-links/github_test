@@ -3,7 +3,7 @@ import pytest
 
 def pytest_addoption(parser):
     parser.addoption("--format", action="store", default="json",
-        help="Format for REST response: xml or json")
+                     help="Format for REST response: xml or json")
 
 
 @pytest.fixture
