@@ -23,17 +23,17 @@ def fake_api_key():
 
 @pytest.fixture
 def geocode_schema():
-    return open('support/schemas/geocode_schema.json').read()
+    return open('tests/support/schemas/geocode_schema.json').read()
 
 
 @pytest.fixture
 def reverse_geocode_schema():
-    return open('support/schemas/reverse_geocode_schema.json').read()
+    return open('tests/support/schemas/reverse_geocode_schema.json').read()
 
 
 @pytest.fixture
 def request_denied_zero_results_invalid_request_schema():
-    return open('support/schemas/request_denied_zero_results_invalid_request_schema.json').read()
+    return open('tests/support/schemas/request_denied_zero_results_invalid_request_schema.json').read()
 
 
 @pytest.fixture
