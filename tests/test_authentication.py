@@ -39,4 +39,3 @@ class TestAuthentication(object):
         jsonschema.Draft4Validator(json.loads(request_denied_zero_results_invalid_request_schema)
                                    ).validate(data)
         assert data['status'] == "REQUEST_DENIED"
-
