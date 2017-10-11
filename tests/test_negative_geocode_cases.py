@@ -24,3 +24,20 @@ class TestNegativeGeocode(object):
                                    ).validate(data)
 
         assert data['status'] == "ZERO_RESULTS"
+
+    @pytest.mark.parametrize("latlng", [
+        "?latlng=abcd,wxyz",
+        "?latlng=9999,-9999",
+        "?latlng=40.714224a,-73.961452",
+        "?latlng=40.714224,-73.961452a",
+        "?latlng=40.714%20224,-73.961452",
+        "?latlng=40.714224,-73.96%201452",
+        "?latlng=40.714224!,-73.961452",
+        "?latlng=40.714224,-73.961452!"
+    ])
+    def test_bad_longitude_for_bad_latlng(
+            self, api_key, latlng, https_url):
+        url = https_url + latlng + api_key
+        with pytest.raises(urllib2.HTTPError) as error:
+            json.loads(urllib2.urlopen(url).read())
+        assert str(error.value) == "HTTP Error 400: Bad Request"
