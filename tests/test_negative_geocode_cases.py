@@ -25,6 +25,21 @@ class TestNegativeGeocode(object):
 
         assert data['status'] == "ZERO_RESULTS"
 
+    @pytest.mark.parametrize(("address", "params"), [
+        ("?address=KS", "&components=country:ZZ"),
+        ("?address=FL", "&components=country:shawshank|locality:post%20al"),
+        ("?address=NY", "&components=country:shaw%20shank")
+    ])
+    def test_return_zero_results_for_bad_parameter_values(
+            self, api_key, address, params, request_denied_zero_results_invalid_request_schema, https_url):
+        url = https_url + address + params + api_key
+
+        data = json.loads(urllib2.urlopen(url).read())
+        jsonschema.Draft4Validator(json.loads(request_denied_zero_results_invalid_request_schema)
+                                   ).validate(data)
+
+        assert data['status'] == "ZERO_RESULTS"
+
     @pytest.mark.parametrize("latlng", [
         "?latlng=abcd,wxyz",
         "?latlng=9999,-9999",
