@@ -54,9 +54,9 @@ This enabled us to:
 * Easily extend multiple test methods with the same functionality
 * Modify tests from the command line by using arguments
 
+Fixtures are passed into the test case via argument and they are in `conftest.py`.
+
 ## Test Types
-
-
 
 ### Geocode Tests
 

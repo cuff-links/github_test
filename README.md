@@ -7,6 +7,11 @@ a mixture of REST API tests, Performance tests, and CI Configuration.
  [![SSL Rating](https://sslbadge.org/?domain=ci.powercoder.tech)](https://www.ssllabs.com/ssltest/analyze.html?d=ci.powercoder.tech)
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Sections
+
+* [API Tests]()
+* [Performance Tests]()
+* [Schema]()
 
 ## Running The Tests Locally
 
