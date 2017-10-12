@@ -58,12 +58,27 @@ Fixtures are passed into the test case via argument and they are in `conftest.py
 
 ## Test Types
 
+There are several types of tests that were written and each test method takes its own set of parameters and makes its own assertions.
+
+**NOTE REGARDING PARAMETERS**
+
+Do not enclose spaces within your parameters  or you will get back a Bad Response Error (400). Make sure to use either a plus sign `+` or the special character for space `%20` to 
+achieve the desired result.
+
 ### Geocode Tests
 
-#### Negative Tests
+#### Test Methods
+
+* `test_return_geocode_for_valid_address`
+
+* `test_return_address_for_valid_geocode`
+
+
+##### Negative Tests
+
 
 ### Authentication Tests
 
-# Hacking On Tests
+## Hacking On Tests
 
 ## Conventions
