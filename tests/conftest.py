@@ -13,7 +13,7 @@ def output_format(request):
 
 @pytest.fixture
 def api_key():
-    return "&key=AIzaSyAosWlLK7_w0yrHUqivHjM4xYOXLvXUdWg"
+    return "&key=AIzaSyCEF5uFW7KYGLUpzqpgWwYrlqXpqjz8PCw"
 
 
 @pytest.fixture

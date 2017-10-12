@@ -8,7 +8,7 @@ class GeocodeResponse(TaskSet):
 
     @staticmethod
     def api_key():
-        return "&key=AIzaSyAosWlLK7_w0yrHUqivHjM4xYOXLvXUdWg"
+        return "&key=AIzaSyCEF5uFW7KYGLUpzqpgWwYrlqXpqjz8PCw"
 
     @task
     def geocode(self):
