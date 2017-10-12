@@ -9,9 +9,9 @@ a mixture of REST API tests, Performance tests, and CI Configuration.
 
 ## Sections
 
-* [API Tests]()
-* [Performance Tests]()
-* [Schema]()
+* [API Tests](http://github.powercoder.tech/tests/api_tests)
+* [Performance Tests](http://github.powercoder.tech/perf_tests/performance)
+* [Schema](http://github.powercoder.tech/tests/support/schemas/schemas)
 
 ## Running The Tests Locally
 
