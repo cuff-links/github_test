@@ -1,7 +1,5 @@
 # GitHub Senior Test Engineer Exercise
 
-<iframe src="https://githubbadge.appspot.com/silne30?s=1" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder="0"></iframe>
-
 Thanks for taking a look at my GitHub **Senior** Test Engineer exercise. This submission is actually
 a mixture of REST API tests, Performance tests, and CI Configuration.
 
