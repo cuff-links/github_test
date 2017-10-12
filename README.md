@@ -10,7 +10,7 @@ a mixture of REST API tests, Performance tests, and CI Configuration.
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
-## Running The Tests
+## Running The Tests Locally
 
 To run this test suite, one will already assume that you have [python 2.7](https://www.python.org/download/releases/2.7/) installed along with 
 [Virtualenv](https://virtualenv.pypa.io/en/stable/) (or perhaps [VirtualenvWrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)).
@@ -19,7 +19,13 @@ To run this test suite, one will already assume that you have [python 2.7](https
 
 The easiest way to run the test suite is through [Tox](https://tox.readthedocs.io/en/latest/).
 
-* Install Tox
+* [Tox](https://tox.readthedocs.io/en/latest/)
 * Navigate to root of repository
 * Run `tox`
 
+### Using Py.Test Directly
+* Install [Py.Test](https://docs.pytest.org/en/latest/)
+* `cd tests` from the root of repository.
+* Run ` pytest --capture=sys --spec`
+
+    
