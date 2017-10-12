@@ -35,7 +35,7 @@ class TestNegativeGeocode(object):
         "?latlng=40.714224!,-73.961452",
         "?latlng=40.714224,-73.961452!"
     ])
-    def test_bad_longitude_for_bad_latlng(
+    def test_http_error_thrown_for_invalid_latlng(
             self, api_key, latlng, https_url):
         url = https_url + latlng + api_key
         with pytest.raises(urllib2.HTTPError) as error:
