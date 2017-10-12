@@ -24,6 +24,20 @@ class TestGeocode(object):
         data = urllib2.urlopen(url).read()
         jsonschema.Draft4Validator(json.loads(geocode_schema)).validate(json.loads(data))
 
+    @pytest.mark.parametrize(("address", "parameters"), [
+        "?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA",
+        "?address=232000",
+        "?address=4110",
+        "?address=1+Frost+Street,+Gilbert,+AR",
+        "?address=Narsarsuaq,+Greenland",
+        "?address=chekalin,+russia%20301414",
+        "?address=51+Kalakaua+St,+Hilo,+HI%2096720",
+        "?address=Mala,+Sweden",
+        "?address=!KS!"
+    ])
+    def test_return_geocode_for_valid_address_with_valid_parametetrs(self, api_key, address, geocode_schema, https_url):
+        pass
+
     @pytest.mark.parametrize("latlng", [
         "?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA"
     ])
@@ -33,3 +47,6 @@ class TestGeocode(object):
 
         data = urllib2.urlopen(url).read()
         jsonschema.Draft4Validator(json.loads(reverse_geocode_schema)).validate(json.loads(data))
+
+    def test_return_address_for_valid_geocode_with_valid_parameters(self):
+        pass
